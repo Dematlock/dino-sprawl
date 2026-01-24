@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cphb53x5nijjh"]
+[gd_scene load_steps=13 format=3 uid="uid://cphb53x5nijjh"]
 
+[ext_resource type="Script" uid="uid://ba7oec16cb7in" path="res://characters/scripts/player.gd" id="1_3eadt"]
 [ext_resource type="Texture2D" uid="uid://32mbwd2t1df" path="res://characters/DinoSprites - doux.png" id="1_dnjla"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3eadt"]
@@ -70,6 +71,7 @@ animations = [{
 size = Vector2(8, 8)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_3eadt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_q605b")
