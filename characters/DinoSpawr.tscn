@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=4 uid="uid://dbemc8ospmqol"]
+[gd_scene load_steps=28 format=4 uid="uid://dbemc8ospmqol"]
 
 [ext_resource type="PackedScene" uid="uid://cphb53x5nijjh" path="res://characters/player.tscn" id="1_0h30y"]
 [ext_resource type="Texture2D" uid="uid://daj8wda4t1obn" path="res://tilesets/back.png" id="1_525vn"]
 [ext_resource type="Script" uid="uid://ng7r25tb5kte" path="res://Scripts/dino_spawr.gd" id="1_1128y"]
+[ext_resource type="Script" uid="uid://evndsl3o8cxv" path="res://characters/game_manager.gd" id="2_iwbd0"]
 [ext_resource type="FontFile" uid="uid://d2aw1w8abur7l" path="res://fonts/PixelOperator8-Bold.ttf" id="2_pv1s4"]
 [ext_resource type="Texture2D" uid="uid://dprke2gstwsp" path="res://tilesets/tileset.png" id="3_pv1s4"]
 [ext_resource type="Texture2D" uid="uid://cf2sqp2ych2pb" path="res://tilesets/middle.png" id="4_mbs3t"]
@@ -1131,6 +1132,10 @@ _data = {
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1128y")
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_iwbd0")
+
 [node name="SkyLandscape" type="TileMapLayer" parent="."]
 position = Vector2(247, 533)
 tile_map_data = PackedByteArray("AAACAP7/AQAAAAAAAAAaAP7/AQAAAAAAAAACAO//AQAAAAAAADAaAO//AQAAAAAAADAyAP7/AQAAAAAAAAAyAO//AQAAAAAAADBKAO//AQAAAAAAADBKAP7/AQAAAAAAAAA=")
@@ -1190,6 +1195,12 @@ position = Vector2(292, 494)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, 3)
 zoom = Vector2(3, 3)
+
+[node name="ScoreKeeper" type="Label" parent="Player/Camera2D"]
+offset_left = -184.0
+offset_top = -99.0
+offset_right = -144.0
+offset_bottom = -76.0
 
 [node name="ForeGround" type="TileMapLayer" parent="."]
 position = Vector2(284, 503)
