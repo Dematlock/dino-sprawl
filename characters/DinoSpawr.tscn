@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://dbemc8ospmqol"]
+[gd_scene load_steps=27 format=4 uid="uid://dbemc8ospmqol"]
 
 [ext_resource type="PackedScene" uid="uid://cphb53x5nijjh" path="res://characters/player.tscn" id="1_0h30y"]
 [ext_resource type="Texture2D" uid="uid://daj8wda4t1obn" path="res://tilesets/back.png" id="1_525vn"]
@@ -10,8 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://drhfps0ybqhuo" path="res://Platforms/platform_01.tscn" id="6_bacw1"]
 [ext_resource type="PackedScene" uid="uid://rd0ba6nr3pfo" path="res://items/coin_01.tscn" id="9_dlel7"]
 [ext_resource type="PackedScene" uid="uid://ccudffb7focvo" path="res://Scripts/death.tscn" id="10_5yoj4"]
-[ext_resource type="PackedScene" uid="uid://cmb4bbhodejj3" path="res://slime.tscn" id="11_bcw0i"]
+[ext_resource type="PackedScene" uid="uid://cmb4bbhodejj3" path="res://enemies/slime.tscn" id="11_bcw0i"]
 [ext_resource type="PackedScene" uid="uid://b70f8rpladifc" path="res://items/grapes.tscn" id="12_rtq2x"]
+[ext_resource type="PackedScene" uid="uid://b2e8yo56mpw7d" path="res://enemies/boss_slime.tscn" id="13_4ow8u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5yoj4"]
 0:0/0 = 0
@@ -1215,5 +1216,9 @@ position = Vector2(731, 407)
 
 [node name="Grapes4" parent="." instance=ExtResource("12_rtq2x")]
 position = Vector2(535, 406)
+
+[node name="BossSlime" parent="." instance=ExtResource("13_4ow8u")]
+position = Vector2(1519, 248.00003)
+scale = Vector2(11.904602, 11.904602)
 
 [connection signal="body_entered" from="Coin_01" to="." method="_on_coin_01_body_entered"]
